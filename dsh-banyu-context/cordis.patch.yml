@@ -1,0 +1,10 @@
+- insert:
+    - id: dsh-banyu-context
+      name: dsh-banyu-context
+      config:
+        # 2026-10-26 21:00：压缩触发点 70%（compaction-basic.thresholdRatio: 0.70）：
+        # threshold = min(窗口 × 0.70, 窗口 − 输出预留 134,000 − headroom 65,536) = 700,000
+        # 余量：70 万 + 输出 13.4 万 + 系统提示 5 万 + 快照 5 万 + 安全 2 万 ≈ 100.4 万 < 104.8 万。
+        # 提醒设在 60%：压缩前 10 个百分点提醒我写新点。
+        warnRatio: 0.60
+        staleTurns: 100
