@@ -1,0 +1,25 @@
+{
+  "name": "dsh-banyu-expand",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "让压缩点能撑开：按 seq 从 DSH 会话日志读回被压缩盖住的原文。",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "expand.py",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
