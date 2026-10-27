@@ -1,0 +1,4 @@
+- insert:
+    - id: dsh-banyu-bootstrap
+      name: dsh-banyu-bootstrap
+      config: {}
