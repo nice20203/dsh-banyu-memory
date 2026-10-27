@@ -1,0 +1,24 @@
+{
+  "name": "dsh-banyu-bootstrap",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "本鱼的会话开局导入：新窗口一开，最近 60 轮（对话+思考）就在对话历史里。",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
